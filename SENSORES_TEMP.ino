@@ -2,10 +2,9 @@
 #include <Wire.h>    // Biblioteca para utilizaçao do I2C
 
 const int SENSOR_TEMP[] = { 0, 0, 2, 3 };// CRIA UM ARRAY QUE DEFINE CADA PORTA DO SENSOR[1], SENSOR[2], SENSOR[3], IGNORANDO O 0 PARA FINS DE SIMPLIFICAÇAO.
+const int pinos_selecao_canal[] = {D6, D5}; // vetor representa os pinos de seleção do canal no multiplexador.
 
 U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C displayLED(U8G2_R0, U8X8_PIN_NONE); // Display OLED 128x32 I2C
-
-const int pinos_selecao_canal[] = {D6, D5}; // vetor representa os pinos de seleção do canal no multiplexaador.
 
 float temp[4], valor_analog[4];// VARIAVEIS GLOBAIS PARA FAZER OS CALCULOS DE TEMPERATURA
 
